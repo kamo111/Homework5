@@ -17,20 +17,14 @@ public class Main {
         System.out.println("Задание 2.");
 
         int clientDeviceYear = 2015;
-        if (clientOS == 0 && clientDeviceYear < 2015) {
-            System.out.println("Установите версию приложения для iOS по ссылке.");
-        }
-        else if (clientOS == 0 && clientDeviceYear >= 2015) {
+        if (clientOS == 0 && clientDeviceYear >= 2015) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке.");
-        }
-        else if (clientOS == 1 && clientDeviceYear < 2015) {
-            System.out.println("Установите версию приложения для Android по ссылке.");
         }
         else if (clientOS == 1 && clientDeviceYear >= 2015) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке.");
         }
         else {
-            System.out.println("Неопознаная операционная система.");
+            System.out.println("Установите обычную версию приложения по ссылке.");
         }
         //Задание 3
         System.out.println("Задание 3.");
@@ -38,10 +32,10 @@ public class Main {
         int year = 2024;
         if (year > 1584) {
              if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
-                System.out.println("Високосный год.");
+                System.out.println( year +" год является високосным».");
                 }
             else {
-                System.out.println("Невисокосный год.");
+                System.out.println(year +" год является невисокосным».");
             }
         }
 
@@ -52,7 +46,7 @@ public class Main {
                 if (deliveryDistance > 0 && deliveryDistance < 20) {
                     System.out.println("Потребуется день доставки.");
                 }
-                else if (deliveryDistance >= 20 && deliveryDistance <= 60) {
+                else if (deliveryDistance > 20 && deliveryDistance < 60) {
                     System.out.println("Потребуется 2 дня доставки.");
                 }
 
